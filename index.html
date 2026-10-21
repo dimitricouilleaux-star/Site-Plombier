@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plombier Pro | L'Expertise Moderne</title>
+    <!-- Police moderne Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lecteur Lottie pour ton fichier JSON -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <header id="navbar">
+        <div class="logo">
+            <a href="#accueil">Plombier<span>.Pro</span></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#devis">Devis en ligne</a></li> <!-- NOUVEAU LIEN -->
+                <li><a href="#galerie">Galerie</a></li>
+            </ul>
+        </nav>
+        <a href="tel:+33600000000" class="btn-nav">📞 06 00 00 00 00</a>
+    </header>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <div class="hero-text">
+            <div class="badge">Intervention en 30 min</div>
+            <h1>La plomberie,<br><span>repensée pour vous.</span></h1>
+            <p>Fini le stress des fuites. Profitez d'un service rapide, transparent et moderne sur tout le secteur de Castres et Soual.</p>
+            <div class="hero-buttons">
+                <a href="tel:+33600000000" class="btn-primary">Urgence Fuite</a>
+                <!-- NOUVEAU BOUTON VERS LE DEVIS -->
+                <a href="#devis" class="btn-secondary">Estimer mon projet</a>
+            </div>
+        </div>
+        
+        <div class="hero-animation">
+            <lottie-player 
+                src="water-pipe-leakage-repair.json" 
+                background="transparent" 
+                speed="1" 
+                style="width: 100%; height: 100%; max-width: 600px;" 
+                loop 
+                autoplay>
+            </lottie-player>
+        </div>
+    </section>
+
+    <!-- Section Services (4 cartes) -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Notre Savoir-Faire</h2>
+            <p>Des solutions durables pour votre habitat.</p>
+        </div>
+        <div class="cards-container">
+            <!-- Carte 1 -->
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                </div>
+                <h3>Dépannage Rapide</h3>
+                <p>Fuites d'eau, canalisations bouchées ou chasse d'eau défectueuse réparées instantanément.</p>
+            </div>
+            
+            <!-- Carte 2 -->
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7M6 12V8c0-2.21 1.79-4 4-4h4c2.21 0 4 1.79 4 4v4M9 8v4M15 8v4"/></svg>
+                </div>
+                <h3>Salle de Bain</h3>
+                <p>Installation de douches à l'italienne, baignoires et vasques au design contemporain.</p>
+            </div>
+            
+            <!-- Carte 3 -->
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+                </div>
+                <h3>Chauffage & Eau</h3>
+                <p>Pose et entretien de chauffe-eau, ballons thermodynamiques et chaudières.</p>
+            </div>
+
+            <!-- Carte 4 (Nouvelle) -->
+            <div class="card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </div>
+                <h3>Entretien & Débouchage</h3>
+                <p>Assainissement des canalisations, détartrage et maintenance préventive de vos installations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Simulateur de Projet -->
+    <section id="devis" class="simulator-section">
+        <div class="simulator-container">
+            <div class="simulator-header">
+                <h2>Estimez votre projet</h2>
+                <p>Obtenez une réponse rapide de notre équipe.</p>
+                <div class="progress-bar"><div class="progress" id="progress"></div></div>
+            </div>
+
+            <form id="multiStepForm" action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+                
+                <!-- ÉTAPE 1 -->
+                <div class="form-step active" data-step="1">
+                    <h3>Quel est votre besoin principal ?</h3>
+                    <div class="options-grid">
+                        <input type="radio" name="projet" id="proj_sdb" value="Salle de bain" required>
+                        <label for="proj_sdb" class="option-card">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 12v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7M6 12V8c0-2.21 1.79-4 4-4h4c2.21 0 4 1.79 4 4v4M9 8v4M15 8v4"/></svg>
+                            <span>Salle de bain</span>
+                        </label>
+
+                        <input type="radio" name="projet" id="proj_fuite" value="Dépannage / Fuite">
+                        <label for="proj_fuite" class="option-card">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                            <span>Dépannage</span>
+                        </label>
+
+                        <input type="radio" name="projet" id="proj_chauffage" value="Chauffage">
+                        <label for="proj_chauffage" class="option-card">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>
+                            <span>Chauffage</span>
+                        </label>
+                    </div>
+                    <div class="step-actions"><button type="button" class="btn-next btn-primary">Suivant</button></div>
+                </div>
+
+                <!-- ÉTAPE 2 -->
+                <div class="form-step" data-step="2">
+                    <h3>Quel est le niveau d'urgence ?</h3>
+                    <div class="options-grid">
+                        <input type="radio" name="urgence" id="urg_now" value="Immédiat (Urgence)">
+                        <label for="urg_now" class="option-card">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            <span>Immédiat</span>
+                        </label>
+
+                        <input type="radio" name="urgence" id="urg_month" value="Dans le mois">
+                        <label for="urg_month" class="option-card">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <span>Dans le mois</span>
+                        </label>
+
+                        <input type="radio" name="urgence" id="urg_future" value="Projet futur">
+                        <label for="urg_future" class="option-card">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                            <span>Projet à l'étude</span>
+                        </label>
+                    </div>
+                    <div class="step-actions split">
+                        <button type="button" class="btn-prev btn-secondary">Retour</button>
+                        <button type="button" class="btn-next btn-primary">Suivant</button>
+                    </div>
+                </div>
+
+                <!-- ÉTAPE 3 -->
+                <div class="form-step" data-step="3">
+                    <h3>Où pouvons-nous vous recontacter ?</h3>
+                    <div class="input-group">
+                        <input type="text" name="nom" placeholder="Votre nom complet" required>
+                        <input type="tel" name="telephone" placeholder="Téléphone (ex: 06...)" required>
+                        <input type="text" name="ville" placeholder="Code postal / Ville (ex: 81580 Soual)" required>
+                    </div>
+                    <div class="step-actions split">
+                        <button type="button" class="btn-prev btn-secondary">Retour</button>
+                        <button type="submit" class="btn-primary">Envoyer ma demande</button>
+                    </div>
+                </div>
+
+                <!-- Message de succès -->
+                <div class="form-step success-message" id="successMessage">
+                    <div class="success-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h3>Demande envoyée !</h3>
+                    <p>L'artisan vous recontactera sous 24h.</p>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Section Galerie -->
+    <section id="galerie" class="gallery">
+        <div class="section-header">
+            <h2>Nos Réalisations</h2>
+            <p>La qualité de notre travail en images.</p>
+        </div>
+        <div class="gallery-grid">
+            
+            <!-- Réalisation 1 : Salle de bain -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80" alt="Rénovation salle de bain moderne">
+                <div class="overlay"><span>Création Salle de bain</span></div>
+            </div>
+            
+            <!-- Réalisation 2 : Plomberie / Tuyauterie -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80" alt="Tuyauterie cuivre plomberie">
+                <div class="overlay"><span>Rénovation Tuyauterie</span></div>
+            </div>
+            
+            <!-- Réalisation 3 : Chauffage -->
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?auto=format&fit=crop&w=800&q=80" alt="Installation chauffage et thermostat intelligent">
+                <div class="overlay"><span>Installation Chauffage</span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-info">
+            <h2>Plombier<span>.Pro</span></h2>
+            <p>L'artisanat moderne au service de votre confort.</p>
+        </div>
+        <div class="footer-contact">
+            <p>📍 Castres, Soual (Tarn)</p>
+            <p>✉️ contact@plombier-pro.fr</p>
+            <p class="phone">📞 06 00 00 00 00</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

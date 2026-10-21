@@ -1,0 +1,601 @@
+/* Variables CSS pour un thème moderne */
+:root {
+    --bg-color: #f8fafc;
+    --text-main: #0f172a;
+    --text-light: #64748b;
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --accent: #38bdf8;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* --- NAVIGATION (Effet verre moderne) --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    padding: 0.8rem 5%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.btn-nav {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-nav:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* --- ACCUEIL (Hero Section) --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 6rem 5% 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.badge {
+    display: inline-block;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.hero h1 span {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--text-main);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.hero-animation {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- SERVICES --- */
+.services {
+    padding: 6rem 5%;
+    background: var(--white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--bg-color);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: var(--white);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: transparent;
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.card p {
+    color: var(--text-light);
+}
+
+/* --- FOOTER --- */
+footer {
+    background: var(--text-main);
+    color: var(--white);
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+footer h2 span {
+    color: var(--accent);
+}
+
+.footer-info p {
+    color: #94a3b8;
+    margin-top: 1rem;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+    color: #cbd5e1;
+}
+
+.footer-contact .phone {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-top: 1rem;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 8rem;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    nav ul {
+        display: none; /* Menu burger à prévoir pour la suite */
+    }
+    
+    .btn-nav {
+        display: none;
+    }
+}
+/* --- GALERIE --- */
+.gallery {
+    padding: 6rem 5%;
+    background: var(--bg-color); /* Un fond légèrement différent pour séparer des services */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Effet de zoom sur l'image au survol */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Voile sombre qui apparaît sur l'image */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Texte à l'intérieur du voile sombre */
+.overlay span {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.3rem;
+    transform: translateY(20px);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover .overlay span {
+    transform: translateY(0);
+}
+
+/* --- SIMULATEUR DE PROJET --- */
+.simulator-section {
+    padding: 6rem 5%;
+    background: linear-gradient(135deg, var(--bg-color) 0%, #e2e8f0 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.simulator-container {
+    background: var(--white);
+    max-width: 700px;
+    width: 100%;
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
+}
+
+.simulator-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.simulator-header h2 {
+    color: var(--text-main);
+    font-size: 2rem;
+}
+
+.simulator-header p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+/* Barre de progression */
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--primary);
+    width: 33.33%;
+    transition: width 0.4s ease;
+}
+
+/* Étapes du formulaire */
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-step h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cartes cliquables (Options) */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.options-grid input[type="radio"] {
+    display: none; /* Cache le vrai bouton radio */
+}
+
+.option-card {
+    background: var(--bg-color);
+    border: 2px solid transparent;
+    padding: 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-light);
+    transition: all 0.3s;
+}
+
+.option-card:hover {
+    background: #f1f5f9;
+}
+
+/* État sélectionné */
+.options-grid input[type="radio"]:checked + .option-card {
+    border-color: var(--primary);
+    background: #eff6ff;
+    color: var(--primary);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
+}
+
+/* Champs de texte */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.input-group input {
+    padding: 1rem 1.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Boutons */
+.step-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.step-actions.split {
+    justify-content: space-between;
+}
+
+.step-actions button {
+    cursor: pointer;
+    border: none;
+}
+
+/* Message de succès */
+.success-message {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+    .simulator-container {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* --- STYLES DES ICÔNES SVG --- */
+
+/* Icônes de la section Services */
+.card-icon svg {
+    width: 48px;
+    height: 48px;
+    stroke: var(--primary);
+    transition: transform 0.4s ease;
+}
+
+.card:hover .card-icon svg {
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* Modifier l'intérieur des cartes du formulaire pour aligner l'icône et le texte */
+.option-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.option-card svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--text-light);
+    transition: all 0.3s;
+}
+
+/* Changement de couleur au clic dans le formulaire */
+.options-grid input[type="radio"]:checked + .option-card svg {
+    stroke: var(--primary);
+}
+
+/* Icône de succès finale */
+.success-icon svg {
+    width: 64px;
+    height: 64px;
+    stroke: #10b981; /* Un beau vert de validation moderne */
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+/* Container de la grille forcée en 2x2 */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+    gap: 2rem;
+    max-width: 1000px; /* Légèrement réduit pour garder les 4 cartes bien centrées */
+    margin: 0 auto;
+}
+
+/* On ajoute cette règle dans tes media queries existantes (tout en bas du fichier) pour les téléphones */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* Passage sur 1 seule colonne sur mobile */
+    }
+}
+
+/* Rend le lien du logo invisible (pas de soulignement, garde la bonne couleur) */
+.logo a {
+    text-decoration: none;
+    color: var(--text-main);
+    transition: opacity 0.3s;
+}
+
+.logo a span {
+    color: var(--primary);
+}
+
+/* Petit effet visuel quand on passe la souris sur le logo */
+.logo a:hover {
+    opacity: 0.8;
+}
